@@ -1,0 +1,30 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+
+  <form (ngSubmit)="loginclicked()">
+    <ion-item>
+      <ion-label>Todo</ion-label>
+      <ion-input [type]="email" [(ngModel)]="username" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Todo</ion-label>
+      <ion-input type="password" [(ngModel)]="password" name="title"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Login</button>
+  </form>
+
+  <br>
+  <button block  style="text-decoration: underline ;" (click)="signupClicked()" >Create New Account</button>
+
+
+
+</ion-content>

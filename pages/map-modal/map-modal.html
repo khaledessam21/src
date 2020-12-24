@@ -1,0 +1,34 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>MapModal</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <agm-map [latitude]="mylocation.Latitude"
+           [longitude]="mylocation.Longitude"
+           [zoom]="10" (mapClick)="click($event)">
+    <agm-marker  *ngIf="locationset"
+                 [latitude]="mylocation.Latitude" [longitude]="mylocation.Longitude">
+
+    </agm-marker>
+  </agm-map>
+
+<ion-row>
+<ion-col col-6>
+  <button  [disabled]="!locationset" ion-button color="secondary" block (click)="setLocation()" >
+    Set
+  </button>
+</ion-col>
+  <ion-col col-6>
+    <button ion-button color="danger" block (click)="Cancel()" >
+      Close
+    </button>
+  </ion-col>
+</ion-row>
+</ion-content>
